@@ -14,6 +14,13 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      {/* Made by section */}
+      <div className="bg-blue-600 text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm">Made by - Akash Joshi</p>
+        </div>
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
