@@ -7,9 +7,9 @@
     <style>
         :root {
             --primary-color: #0366d6;
-            --secondary-color: #24292e;
-            --bg-light: #f6f8fa;
+            --header-bg: #24292e;
             --text-color: #24292e;
+            --bg-light: #f6f8fa;
             --border-color: #e1e4e8;
         }
         * {
@@ -20,29 +20,27 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
             background: var(--bg-light);
+            color: var(--text-color);
         }
         .header {
-            background: var(--secondary-color);
+            background: var(--header-bg);
             color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            padding: 4rem 2rem;
+            text-align: center;
         }
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         .header p {
+            font-size: 1.2rem;
             opacity: 0.9;
         }
-        main {
-            padding: 0 2rem;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
         }
         .card {
             background: white;
@@ -57,6 +55,22 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--border-color);
         }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .feature {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
         .links {
             list-style: none;
         }
@@ -66,7 +80,7 @@
             position: relative;
         }
         .links li::before {
-            content: '→';
+            content: "→";
             position: absolute;
             left: 0;
             color: var(--primary-color);
@@ -83,12 +97,14 @@
             text-align: center;
             padding: 2rem;
             color: #666;
-            margin-top: 3rem;
             border-top: 1px solid var(--border-color);
         }
         @media (max-width: 768px) {
-            .container, main {
-                padding: 0 1rem;
+            .header {
+                padding: 3rem 1rem;
+            }
+            .container {
+                padding: 1rem;
             }
             .header h1 {
                 font-size: 2rem;
@@ -98,33 +114,47 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1>Welcome to GenericDev Hub</h1>
-            <p>A TypeScript-based Development Hub</p>
-        </div>
+        <h1>Welcome to GenericDev Hub</h1>
+        <p>A modern TypeScript development environment</p>
     </header>
 
     <main class="container">
         <section class="card">
-            <h2>About</h2>
-            <p>This is the GitHub Pages site for the GenericDev Hub repository. Here you'll find documentation and resources related to our TypeScript-based development hub.</p>
+            <h2>About the Project</h2>
+            <p>GenericDev Hub is a comprehensive TypeScript-based development environment designed to streamline your web development workflow. Our platform provides the tools and structure you need to build modern, type-safe applications efficiently.</p>
+        </section>
+
+        <section class="card">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>TypeScript Ready</h3>
+                    <p>Built with TypeScript from the ground up for enhanced development experience and type safety.</p>
+                </div>
+                <div class="feature">
+                    <h3>Modern Tools</h3>
+                    <p>Integrated with current best practices and development patterns for web applications.</p>
+                </div>
+                <div class="feature">
+                    <h3>Developer Focused</h3>
+                    <p>Optimized for developer productivity with comprehensive documentation and tooling.</p>
+                </div>
+            </div>
         </section>
 
         <section class="card">
             <h2>Quick Links</h2>
             <ul class="links">
                 <li><a href="https://github.com/akas3j/GenericDev_Hub">Repository Home</a> - View source code and contribute</li>
-                <li><a href="https://github.com/akas3j/GenericDev_Hub/issues">Issues</a> - Report bugs or request features</li>
+                <li><a href="https://github.com/akas3j/GenericDev_Hub/issues">Issue Tracker</a> - Report bugs or request features</li>
+                <li><a href="https://github.com/akas3j/GenericDev_Hub/wiki">Documentation</a> - Read the project documentation</li>
                 <li><a href="https://github.com/akas3j/GenericDev_Hub/pulls">Pull Requests</a> - Contribute to the project</li>
-                <li><a href="https://github.com/akas3j/GenericDev_Hub/wiki">Documentation</a> - Read the documentation</li>
             </ul>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>Last updated: 2025-11-03 | Maintained by <a href="https://github.com/akas3j">akas3j</a></p>
-        </div>
+        <p>Last updated: 2025-11-03 10:05:25 UTC | Maintained by <a href="https://github.com/akas3j">akas3j</a></p>
     </footer>
 </body>
 </html>
